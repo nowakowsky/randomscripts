@@ -45,6 +45,7 @@ ufw allow 1194/udp
 IFACENAME=`ip link show | grep -v lo | awk -F: '$0 ~ "^[0-9]+:" {print $2}' | tr -d ' '`
 UFW_RULES=`cat /etc/ufw/before.rules`
 
+# comment out those lines if you don't want to allow internet access
 echo "*nat" > /etc/ufw/before.rules
 echo ":POSTROUTING ACCEPT [0:0]" >> /etc/ufw/before.rules
 echo "-A POSTROUTING -s 172.16.20.0/24 -o $IFACENAME -j MASQUERADE" >> /etc/ufw/before.rules
