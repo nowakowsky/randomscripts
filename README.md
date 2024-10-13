@@ -1,0 +1,2 @@
+# randomscripts
+some useful scripts
