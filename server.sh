@@ -57,6 +57,6 @@ sed -i 's/DEFAULT_FORWARD_POLICY="DROP"/DEFAULT_FORWARD_POLICY="ACCEPT"/' /etc/d
 ufw reload
 systemctl enable --now openvpn-server@server
 
-echo DONE
-echo NOW RUN client.sh with client names as args to generate clients and .ovpn files, for example:
-echo client.sh jkowalski tsmith admin1 
+echo "DONE"
+echo "NOW RUN client.sh with client names as args to generate clients and .ovpn files, for example:"
+echo "client.sh jkowalski tsmith admin1 "
